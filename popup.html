@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html ng-app="AngularChromeEx" ng-csp>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/popup.css">
+
+        <!--<script src="js/lib/jquery-1.8.2.min.js"></script>-->
+        <script src="js/lib/angular.min.js"></script>
+
+        <script src="js/app/app.js"></script>
+        <script src="js/app/popup.js"></script>
+    </head>
+    <body id="popup">
+        <div class="">
+            
+            <div ng-controller="PageController" ng-init="init();">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3>
+                            <img src="img/crunchyroll.png" width="30">Crunchy Roll Logger
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        
+                        <h3>
+                            Anime: {{pageInfo.title}}
+                        </h3>
+
+                        <h5>
+                            {{pageInfo.episode}}
+                        </h5>                  
+
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-success" ng-click="saveAnimeAsViewed()">Save!</button>
+                    </div>
+                </div>
+
+            </div>    
+        </div>
+        
+    </body>
+</html>
