@@ -1,4 +1,5 @@
-﻿myApp.service('pageInfoService', function() {
+﻿//https://developer.chrome.com/apps/storage
+myApp.service('pageInfoService', function() {
     this.getInfo = function(callback) {
         chrome.tabs.query({'active': true},
         function (tabs) {
